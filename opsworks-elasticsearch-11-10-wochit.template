@@ -195,15 +195,17 @@
                             }
                         },
                         "path": {
-                            "data": "/mnt/elasticsearch-data"
+                            "data": "/mnt/elasticsearch-data",
+							"logs": "/var/logs/elasticsearch
                         },
                         "cloud": {
                             "aws": {
-                                "region": "us-east-1"
+                                "region": "us-east-1d"
                             }
                         },
                         "custom_config": {
-                            "cluster.routing.allocation.awareness.attributes": "rack_id"
+                            "cluster.routing.allocation.awareness.attributes": "rack_id",
+							"index.routing.allocation.disable_allocation": false
                         }
                     }
                 },
@@ -266,10 +268,11 @@
                 }
             }
         },
-        "elasticsearch-test-opsworks": {
+        "elasticsearchopsworks": {
             "Type": "AWS::EC2::SecurityGroup",
             "Properties": {
                 "GroupDescription": "so that ES cluster can find other nodes"
+				
             }
         },
         "searchLayer": {
@@ -302,13 +305,16 @@
                     {
                         "MountPoint": "/mnt/elasticsearch-data",
                         "NumberOfDisks": 1,
-                        "Size": 100
+                        "Size": 150,
+						"VolumeType" : "gp2",
+						"AvailabilityZone" : { "Fn::GetAtt" : [ "EC2Instance", "AvailabilityZone" ] }
+						
                     }
                 ],
                 "CustomSecurityGroupIds": [
                     {
                         "Fn::GetAtt": [
-                            "elasticsearch-test-opsworks",
+                            "elasticsearch8test8opsworks",
                             "GroupId"
                         ]
                     }
