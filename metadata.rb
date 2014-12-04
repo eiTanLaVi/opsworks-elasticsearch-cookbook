@@ -1,0 +1,11 @@
+name             'opsworks_elasticsearch_cookbook'
+maintainer       'eiTanLaVi'
+maintainer_email 'lavi.eitan@gmail.com'
+description      'ElasticSearch OpsWorks Custom'
+long_description 'ElasticSearch OpsWorks Custom'
+version          '0.1.0'
+
+provides 'layer-custom::esplugins'
+provides 'layer-custom::esmonit'
+provides 'layer-custom::cloudwatch-custom' 
+provides 'layer-custom::allocation-awareness' 
