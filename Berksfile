@@ -4,7 +4,7 @@ cookbook 'apt', '>= 2.4.0', git: 'git://github.com/opscode-cookbooks/apt.git', t
 cookbook 'ark', git: 'git://github.com/opscode-cookbooks/ark.git', tag: 'v0.9.0'
 cookbook 'bluepill', '>= 2.3.1', git: 'git://github.com/opscode-cookbooks/bluepill.git', tag: 'v2.3.1'
 cookbook 'build-essential', '>= 2.0.4', git: 'git://github.com/opscode-cookbooks/build-essential.git', tag: 'v2.0.4'
-cookbook 'java', '>= 1.24.0', git: 'git://github.com/agileorbit-cookbooks/java.git', tag: 'v1.24.0'
+cookbook 'java', '>= 1.24.0', git: 'git://github.com/opscode-cookbooks/java.git', tag: 'v1.24.0'
 cookbook 'monit', '~> 0.7.1', git: 'git://github.com/apsoto/monit.git'
 cookbook 'ohai', '>= 2.0.1', git: 'git://github.com/opscode-cookbooks/ohai.git', tag: 'v2.0.1'
 cookbook 'python', '>= 1.4.6', git: 'git://github.com/poise/python.git', tag: 'v1.4.6'
